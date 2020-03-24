@@ -22,8 +22,7 @@
 		"ejs": "^3.0.1",
 		"get-stdin": "^7.0.0",
 		"meow": "^6.1.0",
-		"tap-parser": "^10.0.1",
-		"to-readable-stream": "^2.1.0",
+		"neat-tap": "^1.0.0",
 		"write": "^2.0.0"
 	},
 	"devDependencies": {

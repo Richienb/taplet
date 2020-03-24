@@ -1,6 +1,6 @@
 "use strict"
 
-const neatTap = require("./util/neat-tap")
+const neatTap = require("neat-tap")
 const { renderFile } = require("ejs")
 const write = require("write")
 
