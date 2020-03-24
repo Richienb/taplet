@@ -18,7 +18,14 @@
 		"test": "yarn lint && ava"
 	},
 	"keywords": [],
-	"dependencies": {},
+	"dependencies": {
+		"ejs": "^3.0.1",
+		"get-stdin": "^7.0.0",
+		"meow": "^6.1.0",
+		"tap-parser": "^10.0.1",
+		"to-readable-stream": "^2.1.0",
+		"write": "^2.0.0"
+	},
 	"devDependencies": {
 		"ava": "^3.5.1",
 		"eslint-config-richienb": "^0.3.0",
