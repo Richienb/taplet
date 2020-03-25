@@ -18,3 +18,7 @@ $ tape test.js | taplet
 
 $ tape test.js | taplet --outputFile report.html
 ```
+
+## Example output
+
+![Example output](media/output.png)
