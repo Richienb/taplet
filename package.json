@@ -1,6 +1,6 @@
 {
 	"name": "taplet",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Create HTML from TAP reports.",
 	"repository": "https://github.com/Richienb/taplet.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
