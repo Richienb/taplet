@@ -1,13 +1,14 @@
 const test = require("ava")
-const theModule = require(".")
+const execa = require("execa")
 
-test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async (t) => {
+	t.snapshot((await execa("node", ["cli"], {
+		input: `1..6
+#
+# Some comment here.
+#
+ok 1 - First test
+not ok 2 - Second test
+`,
+	})).stdout)
 })

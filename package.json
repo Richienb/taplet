@@ -1,14 +1,17 @@
 {
-	"name": "the-module",
+	"name": "taplet",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Create HTML from TAP reports.",
+	"repository": "https://github.com/Richienb/taplet.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
-	"main": "index.js",
+	"main": "cli.js",
+	"bin": {
+		"taplet": "cli.js"
+	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"cli.js",
+		"templates"
 	],
 	"engines": {
 		"node": ">=10"
@@ -17,7 +20,20 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"tap",
+		"tape",
+		"ava",
+		"output",
+		"consumer",
+		"generator",
+		"reporter",
+		"report",
+		"create",
+		"make",
+		"test",
+		"cli"
+	],
 	"dependencies": {
 		"ejs": "^3.0.1",
 		"get-stdin": "^7.0.0",
@@ -28,6 +44,7 @@
 	"devDependencies": {
 		"ava": "^3.5.1",
 		"eslint-config-richienb": "^0.3.0",
+		"execa": "^4.0.0",
 		"xo": "^0.26.1"
 	},
 	"resolutions": {

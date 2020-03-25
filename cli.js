@@ -1,22 +1,40 @@
+#!/usr/bin/env node
+
 "use strict"
 
+const { resolve: resolvePath } = require("path")
 const neatTap = require("neat-tap")
 const { renderFile } = require("ejs")
-const write = require("write")
+const writeFile = require("write")
+const meow = require("meow")
+const getStdin = require("get-stdin")
 
-const data = `1..6
-#
-# Create a new Board and Tile, then place
-# the Tile onto the board.
-#
-ok 1 - The object is a Board
-ok 2 - Board size is zero
-ok 3 - The object is a Tile
-ok 4 - Get possible places to put the Tile
-ok 5 - Placing the tile produces no error
-ok 6 - Board size is 1`
+const cli = meow(`
+    Usage
+      $ taplet
+
+    Options
+      --outputFile, -o The file to write the HTML report to.
+
+	Examples
+	  $ tape test.js | taplet
+	  <!DOCTYPE html>...
+
+      $ tape test.js | taplet --outputFile report.html
+`, {
+	flags: {
+		outputFile: {
+			type: "string",
+			alias: "o",
+		},
+	},
+})
 
 module.exports = (async () => {
+	const data = await getStdin()
 	const tapData = await neatTap(data)
-	await write("out.html", await renderFile("assets/templates/base.ejs", tapData))
+	const output = await renderFile(resolvePath("templates/base.ejs"), tapData)
+
+	if (cli.flags.outputFile) await writeFile(cli.flags.outputFile, output)
+	else console.log(output)
 })()

@@ -1,41 +1,20 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# taplet [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/taplet/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/taplet)
 
-My awesome module.
+Create HTML from TAP reports.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/taplet.png)](https://npmjs.com/package/taplet)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install --global taplet
 ```
 
 ## Usage
 
-```js
-const theModule = require("the-module");
-
-theModule("unicorns");
-//=> 'unicorns & rainbows'
 ```
+$ tape test.js | taplet
+<!DOCTYPE html>...
 
-## API
-
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+$ tape test.js | taplet --outputFile report.html
+```
