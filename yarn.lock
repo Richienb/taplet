@@ -71,11 +71,6 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
-"@sindresorhus/is@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-2.1.0.tgz#6ad4ca610f696098e92954ab431ff83bea0ce13f"
-  integrity sha512-lXKXfypKo644k4Da4yXkPCrwcvn6SlUW2X2zFbuflKHNjf0w9htru01bo26uMhleMXsDmnZ12eJLdrAZa9MANg==
-
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
@@ -2562,7 +2557,7 @@ map-obj@^2.0.0:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-2.0.0.tgz#a65cd29087a92598b8791257a523e021222ac1f9"
   integrity sha1-plzSkIepJZi4eRJXpSPgISIqwfk=
 
-map-obj@^4.0.0, map-obj@^4.1.0:
+map-obj@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.1.0.tgz#b91221b542734b9f14256c0132c897c5d7256fd5"
   integrity sha512-glc9y00wgtwcDmp7GaE/0b0OnxpNJsVf3ael/An6Fe2Q51LLwN1er6sdomLRzz5h0+yMpiYLhWYF5R7HeqVd4g==
@@ -2792,12 +2787,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-neat-tap@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/neat-tap/-/neat-tap-1.0.0.tgz#0d859949e6c9f4e808c20b22dc279a9b47f91a4a"
-  integrity sha512-tsmwT9TzSG5wN2yOHfjty63bUrh3J6Z4nHdKzLpvYBxcPN9Jq0VNtTvjHVmH4WPRTV+w2OtGBwjU0zOTX0c7mA==
+neat-tap@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/neat-tap/-/neat-tap-2.0.0.tgz#8b6e39471d752ed98d37d2fb82f9b8c53842c112"
+  integrity sha512-gaFXBqfmgyYslu7nGZIGJoqSpff52AmsmaN72rXVJYjGpcqJ9VCIK8aQ2GJM5RZ8CHh1Bj1y0zMfz8MYrBNsVQ==
   dependencies:
-    strip-instance "^1.0.0"
     tap-parser "^10.0.1"
     to-readable-stream "^2.1.0"
 
@@ -3806,15 +3800,6 @@ strip-indent@^3.0.0:
   integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
   dependencies:
     min-indent "^1.0.0"
-
-strip-instance@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/strip-instance/-/strip-instance-1.0.0.tgz#ca2656681aa7cb28f78fdbbb49544741687dc241"
-  integrity sha512-Y7AVh9TP3EsiuWgLppxYjlE8zG0HPzyiqoKY9a/aenWsivCCaWyH95P6IrFX3bL3JfcgJ5m/XqvwNuyJ0xEoRg==
-  dependencies:
-    "@sindresorhus/is" "^2.1.0"
-    is-obj "^2.0.0"
-    map-obj "^4.1.0"
 
 strip-json-comments@^3.0.1:
   version "3.0.1"
