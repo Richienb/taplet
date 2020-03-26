@@ -7,7 +7,6 @@ const neatTap = require("neat-tap")
 const { renderFile } = require("ejs")
 const writeFile = require("write")
 const meow = require("meow")
-const getStdin = require("get-stdin")
 
 const cli = meow(`
     Usage
@@ -31,8 +30,7 @@ const cli = meow(`
 })
 
 module.exports = (async () => {
-	const data = await getStdin()
-	const tapData = await neatTap(data)
+	const tapData = await neatTap(process.stdin)
 	const output = await renderFile(resolvePath("templates/base.ejs"), tapData)
 
 	if (cli.flags.outputFile) await writeFile(cli.flags.outputFile, output)

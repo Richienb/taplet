@@ -36,7 +36,6 @@
 	],
 	"dependencies": {
 		"ejs": "^3.0.1",
-		"get-stdin": "^7.0.0",
 		"meow": "^6.1.0",
 		"neat-tap": "^2.0.0",
 		"write": "^2.0.0"
