@@ -1,7 +1,7 @@
 const test = require("ava")
 const execa = require("execa")
 
-test("main", async (t) => {
+test("main", async t => {
 	t.snapshot((await execa("node", ["cli"], {
 		input: `1..6
 #
@@ -9,6 +9,6 @@ test("main", async (t) => {
 #
 ok 1 - First test
 not ok 2 - Second test
-`,
+`
 	})).stdout)
 })

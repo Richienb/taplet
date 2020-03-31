@@ -24,15 +24,18 @@ const cli = meow(`
 	flags: {
 		outputFile: {
 			type: "string",
-			alias: "o",
-		},
-	},
+			alias: "o"
+		}
+	}
 })
 
 module.exports = (async () => {
 	const tapData = await neatTap(process.stdin)
-	const output = await renderFile(resolvePath("templates/base.ejs"), tapData)
+	const output = await renderFile(resolvePath(__dirname, "templates/base.ejs"), tapData)
 
-	if (cli.flags.outputFile) await writeFile(cli.flags.outputFile, output)
-	else console.log(output)
+	if (cli.flags.outputFile) {
+		await writeFile(cli.flags.outputFile, output)
+	} else {
+		console.log(output)
+	}
 })()
