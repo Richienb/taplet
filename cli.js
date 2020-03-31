@@ -7,6 +7,7 @@ const neatTap = require("neat-tap")
 const { renderFile } = require("ejs")
 const writeFile = require("write")
 const meow = require("meow")
+const updateNotifier = require("update-notifier")
 
 const cli = meow(`
     Usage
@@ -28,6 +29,8 @@ const cli = meow(`
 		}
 	}
 })
+
+updateNotifier({ pkg: cli.pkg }).notify()
 
 module.exports = (async () => {
 	const tapData = await neatTap(process.stdin)
