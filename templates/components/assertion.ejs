@@ -1,7 +1,7 @@
 <div class="assertion">
 	<div class="assertion__count"><%= id %></div>
 	<div class="assertion__content">
-		<div><%- ok ? include("assertion-succeeded") : include("assertion-failed") %> </div>
+		<div><%- ok ? include("assertion/succeeded") : include("assertion/failed") %> </div>
 		<div class="assertion__name">
 			<p class="assertion__name-text"><%= name || `Test ${id}` %></p>
 		</div>
