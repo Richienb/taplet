@@ -1,0 +1,20 @@
+<details class="assertion__spoiler--detailed">
+	<summary class="assertion__summary--detailed">
+		<div class="assertion__count"><%= id %></div>
+		<div class="assertion__content assertion__content--detailed">
+			<%- ok ? include("./succeeded-icon") : include("./failed-icon") %>
+			<div class="assertion__name">
+				<p class="assertion__name-text"><%= name || `Test ${id}` %></p>
+			</div>
+		</div>
+	</summary>
+	<div class="assertion__details">
+		<%= extra.name %> (<%= extra.assertion %>)<br>
+		<span class="assertion__details-content">
+			<% for (const [title, value] of Object.entries(extra.values)) { %>
+				<%- title %> <pre class="assertion__details-code"><%= value %></pre><br>
+			<% } %><br>
+			at <pre class="assertion__details-code"><%= extra.at %></pre>
+		</span>
+	</div>
+</details>

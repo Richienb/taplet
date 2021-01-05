@@ -1,0 +1,9 @@
+<div class="assertion">
+	<div class="assertion__count"><%= id %></div>
+	<div class="assertion__content">
+		<%- ok ? include("./succeeded-icon") : include("./failed-icon") %>
+		<div class="assertion__name">
+			<p class="assertion__name-text"><%= name || `Test ${id}` %></p>
+		</div>
+	</div>
+</div>
