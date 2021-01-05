@@ -1,12 +1,15 @@
 <style>
-	.main {
+	body {
+		font-family: "Roboto", "Helvetica", sans-serif;
+	}
+
+	main {
 		padding-top: 20px;
 		display: flex;
-		font-family: "Roboto", "Helvetica", sans-serif;
 		font-weight: 500;
 	}
 
-	.status {
+	.statistics {
 		border-style: solid;
 		border-color: rgba(0, 0, 0, 0.12);
 		border-radius: 50px;
@@ -19,14 +22,14 @@
 		align-items: center;
 	}
 
-	.status__count {
+	.statistics__count {
 		margin-top: 0;
 		margin-bottom: 0;
 		margin-left: 10px;
 		font-size: 18px;
 	}
 
-	.status__seperator {
+	.statistics__seperator {
 		width: 1px;
 		height: 58px;
 		background-color: rgba(0, 0, 0, 0.12);
@@ -36,8 +39,8 @@
 		margin-bottom: -10px;
 	}
 
-	.status__failed-icon {
-		margin-left: 30px;
+	.statistics__failed-icon {
+		margin-left: 20px;
 	}
 
 	.assertions {
@@ -76,5 +79,19 @@
 	.assertion__name-text {
 		margin-top: 6px;
 		margin-bottom: 6px;
+	}
+
+	.poweredby {
+		color: #9E9E9E;
+		text-align: center;
+	}
+
+	.poweredby__link {
+		text-decoration: none;
+		color: #616161;
+	}
+
+	.poweredby__link:hover {
+		color: #212121;
 	}
 </style>

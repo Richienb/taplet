@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<main class="main">
+	<main>
 		<div class="assertions">
 			<%- include('components/statistics'); %>
 			<% assertions.forEach((assertion) => { %>
@@ -17,6 +17,9 @@
 			<% }); %>
 		</div>
 	</main>
+	<footer>
+		<p class="poweredby">Powered by <a class="poweredby__link" href="https://github.com/Richienb/taplet">taplet</a></p>
+	</footer>
 </body>
 
 </html>
