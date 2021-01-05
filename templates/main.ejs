@@ -10,8 +10,8 @@
 
 <body>
 	<main class="main">
-		<%- include('components/statistics'); %>
 		<div class="assertions">
+			<%- include('components/statistics'); %>
 			<% assertions.forEach((assertion) => { %>
 			<%- include('components/assertion', assertion); %>
 			<% }); %>
