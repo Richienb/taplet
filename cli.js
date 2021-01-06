@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-
 "use strict"
-
 const { promises: fs } = require("fs")
 const path = require("path")
 const neatTap = require("neat-tap")

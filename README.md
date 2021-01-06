@@ -1,4 +1,4 @@
-# taplet [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/taplet/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/taplet)
+# taplet
 
 Create HTML from TAP reports.
 
